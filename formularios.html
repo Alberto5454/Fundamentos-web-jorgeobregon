@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+  <link rel="stylesheet" href="styles/css/main.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="formularios.html">Formularios</a></li>
+        <li><a href="tablas.html">Tablas</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="listas.html">Listas</a></li>
+        <li><a href="semantica.html">Semántica</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Formulario de Registro</h1>
+    <form>
+      <label>Nombre: <input type="text" name="nombre" required></label><br>
+      <label>Email: <input type="email" name="email" required></label><br>
+      <label>Contraseña: <input type="password" name="password" required></label><br>
+      <label>Fecha de nacimiento: <input type="date" name="fecha" required></label><br>
+      <label>Género:
+        <select>
+          <option>Masculino</option>
+          <option>Femenino</option>
+          <option>Otro</option>
+        </select>
+      </label><br>
+      <label>Comentarios:<br>
+        <textarea name="comentarios"></textarea>
+      </label><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+  <footer>
+    <p>Contacto: jorge@email.com</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* ========== VARIABLES Y RESET ========== */
+:root {
+    --font-main: 'Segoe UI', sans-serif;
+    --color-bg: #f4f4f4;
+    --color-primary: #2e86de;
+    --color-secondary: #48c9b0;
+    --color-dark: #333;
+    --color-light: #fff;
+    --color-footer: #1a1a1a;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+    line-height: 1.6;
+    padding: 1rem;
+  }
+  
+  /* ========== NAVEGACIÓN ========== */
+  .navbar {
+    background-color: var(--color-primary);
+    padding: 1rem;
+  }
+  
+  .navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+  }
+  
+  .navbar a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: var(--color-secondary);
+  }
+  
+  /* ========== PRESENTACIÓN Y CARDS ========== */
+  .presentacion {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 800px;
+  }
+  
+  .card {
+    background-color: var(--color-light);
+    padding: 1.5rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-dark);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+  }
+  
+  /* ========== TABLAS ========== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  thead {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+  }
+  
+  tfoot {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+  }
+  
+  /* ========== FORMULARIOS ========== */
+  form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  input, select, textarea, button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+  }
+  
+  button {
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  /* ========== MULTIMEDIA ========== */
+  figure {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+  
+  /* ========== LISTAS ========== */
+  ol, ul {
+    margin: 1rem 2rem;
+    list-style-position: inside;
+  }
+  
+  dl {
+    margin: 1rem 2rem;
+  }
+  
+  dt {
+    font-weight: bold;
+  }
+  
+  dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ========== SEMÁNTICA ========== */
+  article {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-left: 5px solid var(--color-primary);
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+  }
+  
+  aside {
+    background-color: #eafaf1;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px dashed var(--color-secondary);
+  }
+  
+  /* ========== FOOTER ========== */
+  footer {
+    background-color: var(--color-footer);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+  }
+  
+  /* ========== ANIMACIONES ========== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  main {
+    animation: fadeIn 1s ease;
+  }
+  
+  /* ========== RESPONSIVE DESIGN ========== */
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
